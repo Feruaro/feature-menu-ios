@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE86F09E24D964785E1AAD0E /* Pods_MenuProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7804B6E6B601CD72E09ED9E2 /* Pods_MenuProfile.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0C30068804F7F46E008F0108 /* Pods-MenuProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuProfile.release.xcconfig"; path = "Target Support Files/Pods-MenuProfile/Pods-MenuProfile.release.xcconfig"; sourceTree = "<group>"; };
+		38A7C88AEC6FFCA59E22CD01 /* Pods-MenuProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuProfile.debug.xcconfig"; path = "Target Support Files/Pods-MenuProfile/Pods-MenuProfile.debug.xcconfig"; sourceTree = "<group>"; };
 		663956BF2D94AAA900B4D5DC /* MenuProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7804B6E6B601CD72E09ED9E2 /* Pods_MenuProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE86F09E24D964785E1AAD0E /* Pods_MenuProfile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6598531F3D3928CEB8A03FC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7804B6E6B601CD72E09ED9E2 /* Pods_MenuProfile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		663956B62D94AAA900B4D5DC = {
 			isa = PBXGroup;
 			children = (
 				663956C12D94AAA900B4D5DC /* MenuProfile */,
 				663956C02D94AAA900B4D5DC /* Products */,
+				D42D2B5F0415F05A4E2B8DA8 /* Pods */,
+				6598531F3D3928CEB8A03FC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D42D2B5F0415F05A4E2B8DA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38A7C88AEC6FFCA59E22CD01 /* Pods-MenuProfile.debug.xcconfig */,
+				0C30068804F7F46E008F0108 /* Pods-MenuProfile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663956D22D94AAAA00B4D5DC /* Build configuration list for PBXNativeTarget "MenuProfile" */;
 			buildPhases = (
+				D8E20AD0916966D460DD7BA9 /* [CP] Check Pods Manifest.lock */,
 				663956BB2D94AAA900B4D5DC /* Sources */,
 				663956BC2D94AAA900B4D5DC /* Frameworks */,
 				663956BD2D94AAA900B4D5DC /* Resources */,
+				4ADEBD65DD9089DCB43D1714 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				663956C12D94AAA900B4D5DC /* MenuProfile */,
 			);
 			name = MenuProfile;
-			packageProductDependencies = (
-			);
 			productName = MenuProfile;
 			productReference = 663956BF2D94AAA900B4D5DC /* MenuProfile.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ADEBD65DD9089DCB43D1714 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuProfile/Pods-MenuProfile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuProfile/Pods-MenuProfile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MenuProfile/Pods-MenuProfile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8E20AD0916966D460DD7BA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MenuProfile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		663956BB2D94AAA900B4D5DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +209,13 @@
 /* Begin XCBuildConfiguration section */
 		663956D32D94AAAA00B4D5DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A7C88AEC6FFCA59E22CD01 /* Pods-MenuProfile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MenuProfile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -170,11 +241,13 @@
 		};
 		663956D42D94AAAA00B4D5DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C30068804F7F46E008F0108 /* Pods-MenuProfile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MenuProfile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

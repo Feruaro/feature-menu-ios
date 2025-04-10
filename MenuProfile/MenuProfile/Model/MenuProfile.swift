@@ -1,10 +1,3 @@
-//
-//  MenuProfile.swift
-//  MenuProfile
-//
-//  Created by Fernanda Ayres Ruaro on 26/03/25.
-//
-
 import Foundation
 
 struct MenuProfileGroup: Codable {

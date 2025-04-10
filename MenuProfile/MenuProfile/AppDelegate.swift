@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MenuProfile
-//
-//  Created by Fernanda Ayres Ruaro on 26/03/25.
-//
-
 import UIKit
 
 @main
